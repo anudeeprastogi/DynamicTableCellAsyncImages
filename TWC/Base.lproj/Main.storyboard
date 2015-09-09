@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eGp-y6-dRI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="x2E-ro-lhz">
+            <objects>
+                <tableViewController id="eGp-y6-dRI" customClass="TWCTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="22" sectionFooterHeight="22" id="zWj-HE-c1g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TWCTableViewCell" rowHeight="100" id="7AP-NF-d0B" userLabel="TWCTableViewCell" customClass="TWCTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7AP-NF-d0B" id="LBz-LZ-ov4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XQ-6p-KGH">
+                                            <rect key="frame" x="100" y="10" width="32.5" height="40.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="97" y="8" width="270" height="20.5"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0s-Iq-Hn5">
+                                            <rect key="frame" x="100" y="67.5" width="480" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="97" y="40" width="260" height="22"/>
+                                            </variation>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="100.png" translatesAutoresizingMaskIntoConstraints="NO" id="nJT-o0-17P">
+                                            <rect key="frame" x="8" y="15" width="70" height="70"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="o0s-Iq-Hn5" secondAttribute="bottom" constant="3.5" id="1vs-nf-13i"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="o0s-Iq-Hn5" secondAttribute="trailing" constant="12" id="MX7-Z4-zwE"/>
+                                        <constraint firstItem="2XQ-6p-KGH" firstAttribute="top" secondItem="LBz-LZ-ov4" secondAttribute="topMargin" constant="2" id="arp-Qf-2fA"/>
+                                        <constraint firstItem="o0s-Iq-Hn5" firstAttribute="leading" secondItem="LBz-LZ-ov4" secondAttribute="leadingMargin" constant="92" id="mJh-hE-QSL"/>
+                                        <constraint firstItem="o0s-Iq-Hn5" firstAttribute="top" secondItem="2XQ-6p-KGH" secondAttribute="bottom" constant="17" id="ush-eN-W0S"/>
+                                        <constraint firstItem="2XQ-6p-KGH" firstAttribute="leading" secondItem="LBz-LZ-ov4" secondAttribute="leadingMargin" constant="92" id="yXV-hl-Cvo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detailTxtLbl" destination="o0s-Iq-Hn5" id="bAR-O2-5UK"/>
+                                    <outlet property="imgView" destination="nJT-o0-17P" id="13M-Mg-JH3"/>
+                                    <outlet property="titleLbl" destination="2XQ-6p-KGH" id="dK8-Sk-bTE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eGp-y6-dRI" id="d8l-Qb-QMV"/>
+                            <outlet property="delegate" destination="eGp-y6-dRI" id="2hj-3Q-1Vk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oJ-GM-a02" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="390"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="100.png" width="100" height="100"/>
+    </resources>
+</document>
